@@ -1,16 +1,17 @@
----
-## 📚 Cheat Sheets Navigation
+## 📚 Cheat Sheets
 
-### 1️⃣ [01-shell-basics.md](01-shell-basics.md)
+1️⃣ [01-shell-basics.md](01-shell-basics.md)
 Covers the fundamentals of shell scripting:
-  - What is a shell script
-  - File extensions and execution
-  - Shebang (`#!`) usage
-  - Logical operators (`&&`, `||`)
-  - Wildcards and special characters
-  - File test operators
-  - Comparison operators
-  - Basic best practices
+
+- What is a shell script
+- File extensions and execution
+- Shebang (`#!`) usage
+- Logical operators (`&&`, `||`)
+- Wildcards and special characters
+- File test operators
+- Comparison operators
+- Basic best practices
+
 ---
 
 ### 2️⃣ [02-shell-variables-and-conditions.md](02-shell-variables-and-conditions.md)
