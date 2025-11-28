@@ -8,7 +8,7 @@ This folder is part of your DevOps learning path and focuses on Linux fundamenta
 
 Provides an overview of the Linux File System Hierarchy Standard, explaining the organization of files and directories in a Linux system.
 
-- [File_system_hierarchy/FHS.md](File_system_hierarchy/FHS.md)
+- [File_system_hierarchy/README.md](File_system_hierarchy/README.md)
 
 ### 2. Cheat Sheets
 
