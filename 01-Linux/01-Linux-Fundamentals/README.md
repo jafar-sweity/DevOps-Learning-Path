@@ -4,20 +4,19 @@ This folder is part of your DevOps learning path and focuses on Linux fundamenta
 
 ## Contents
 
-### 1. Cheat Sheets
+### 1. File System Hierarchy Standard (FHS)
+
+Provides an overview of the Linux File System Hierarchy Standard, explaining the organization of files and directories in a Linux system.
+
+- [File_system_hierarchy/FHS.md](File_system_hierarchy/FHS.md)
+
+### 2. Cheat Sheets
 
 Contains organized cheat sheets for essential Linux commands, divided into categories for easier reference.
 
-- [cheat-sheets/01-basic-navigation.md](cheat-sheets/01-basic-navigation.md)
-- [cheat-sheets/02-file-management.md](cheat-sheets/02-file-management.md)
-- [cheat-sheets/03-text-inspection.md](cheat-sheets/03-text-inspection.md)
-- [cheat-sheets/04-archiving-compression.md](cheat-sheets/04-archiving-compression.md)
-- [cheat-sheets/05-user-permissions.md](cheat-sheets/05-user-permissions.md)
-- [cheat-sheets/06-package-management.md](cheat-sheets/06-package-management.md)
-- [cheat-sheets/07-process-services.md](cheat-sheets/07-process-services.md)
-- [cheat-sheets/08-remote-transfer.md](cheat-sheets/08-remote-transfer.md)
+- [cheat-sheets/README.md](cheat-sheets/README.md)
 
-### 2. Exercises
+### 3. Exercises
 
 Contains practical exercises to apply the Linux commands and concepts from the cheat sheets.
 
