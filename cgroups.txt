@@ -1,0 +1,115 @@
+-- Its all about control 
+
+    - resource control : amount resource
+    - Access Control : Type or resource
+    - Capabilites : privileges
+
+
+solution : 
+
+- Cgroups 
+- selinux 
+- namespaces
+- sandboxing
+
+
+
+* CGroups : 
+
+- Resource Control 
+---> controller :   cpu | network 
+                    ___________
+                     Mem | disk 
+
+
+
+---> Cgroups have hirarchy 
+
+---> cpu shares  : 
+                  -----> have cpue full speed 3 ghz 
+
+                  root 
+                  __|________________________________
+                  |                 |               |
+                  mygroup (5%)     entapp          customgroup ()
+
+
+
+
+---> sys/fs/cgroups 
+
+    هسا هان بنقدر نوزع ونشوف الريسورس اللي عنا لكل البروسيس وبنقدر نعمل cgroups 
+
+    ونحط فيه التكاسكات 
+
+    ---> manual  ( not recomended )
+    
+    ---> semi Automated ( )
+    
+    ---> systemmd 
+
+
+    Example : how this command porcess dd if=/dev/zero oe=/dev/null && ---> ككيف هاي لما نشغلها ع السيستم كامل وكيف بتفرق بس نحطها ب cgroup 
+    منفصل 
+
+    - period 
+    - quota 
+    ==========> 
+    quota المدة القصوى المسموح بها للـ CPU خلال period
+    period	الفاصل الزمني الكلي الذي يُحسب خلاله quota
+
+    
+    هاي الطريقة الاولى اللي هي manul ودحلنا الفايلات وعملن الاشي بالايد 
+
+
+    ---------------------------------------------
+    يلا للطريقة الثانية
+
+    cgcreate -g cpu:/mygroup  :  بنعمل جروب جديد يسمو mygroup
+
+    cgset -r cpu.cfs_period_us=1000000 mygroup  : بنحدد ال period
+    cgset -r cpu.cfs_quota_us=200000 mygroup  : بنحدد ال quota
+
+
+    cgcreate  -g memory:memhoh-limit  : بنعمل جروب جديد للذاكرة
+
+
+    cgroup  tools :     
+
+    - cgcreate  : create cgroup
+    - cgset     : set cgroup parameters
+    - cgexec    : execute task in cgroup    
+    - cgclassify : move task to cgroup
+    - cgdelete  : delete cgroup
+    - cgget     : get cgroup parameters
+    - lscgroup  : list cgroups
+    - systemd-cgls : list cgroups in systemd
+    - systemd-cgtop : show cgroup resource usage
+    ---------------------------------------------   
+
+
+    proc io controller : is to limit disk io 
+
+    
+    throttling : it mean to limit the speed of io operation and we can do that by limiting read and write speed 
+
+-----------------------------------------------------------------
+
+
+Capabilites in containers : this is to limit the privilages of the container
+
+seccomp : this is to limit the system calls that the container can use   
+
+namespaces : this is to isolate the container from the host system 
+
+
+so container use all of this things to be isolated and secure the host system
+
+
+container : isolated process(es) - access to specifice files - limited resource - limited privilages 
+
+-----------------------------------------------------------------
+
+الطريقة الثالثة:
+using systemd to create and manage cgroups 
+
